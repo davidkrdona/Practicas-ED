@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Frase: Referencia del Archivo include/conjuntofrases.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Frase
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('conjuntofrases_8h.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo conjuntofrases.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fichero cabecera del TDA <a class="el" href="classConjuntoFrases.html">ConjuntoFrases</a>.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
+<code>#include &quot;<a class="el" href="frase_8h_source.html">frase.h</a>&quot;</code><br/>
+</div>
+<p><a href="conjuntofrases_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConjuntoFrases.html">ConjuntoFrases</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Fichero cabecera del TDA <a class="el" href="classConjuntoFrases.html">ConjuntoFrases</a>. </p>
+<p>T.D.A. <a class="el" href="classConjuntoFrases.html">ConjuntoFrases</a>.</p>
+<p>Esta clase carga una serie de frases con sus respectivas traducciones y permite consultar las traducciones de una determinada frase</p>
+<p>Un ejemplo de su uso: </p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="conjuntofrases_8h.html">conjuntofrases.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><span class="keyword">using namespace </span>std;</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> * argv[]){</div>
+<div class="line">  <span class="keywordflow">if</span> (argc!=2){</div>
+<div class="line">      cout&lt;&lt;<span class="stringliteral">&quot;Los parametros son:&quot;</span>&lt;&lt;endl;</div>
+<div class="line">      cout&lt;&lt;<span class="stringliteral">&quot;1.Dime el nombre del fichero con las frases &quot;</span>&lt;&lt;endl;</div>
+<div class="line">      <span class="keywordflow">return</span> 0;</div>
+<div class="line">  }</div>
+<div class="line"></div>
+<div class="line">  ifstream fin(argv[1]);</div>
+<div class="line">  <span class="keywordflow">if</span> (!fin){</div>
+<div class="line">      cout&lt;&lt;<span class="stringliteral">&quot;No puedo abrir el fichero &quot;</span>&lt;&lt;argv[1]&lt;&lt;endl;</div>
+<div class="line">      <span class="keywordflow">return</span> 0;</div>
+<div class="line">  }</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="classConjuntoFrases.html">ConjuntoFrases</a> CF;</div>
+<div class="line"></div>
+<div class="line">  fin&gt;&gt;CF;</div>
+<div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;Leidas las frases. Numero Total : &quot;</span>&lt;&lt;CF.<a class="code" href="classConjuntoFrases.html#a0431dbd2873e86a56156ddf58a4b823b">Size</a>()&lt;&lt;endl;</div>
+<div class="line"></div>
+<div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;************************************&quot;</span> &lt;&lt; endl;</div>
+<div class="line">  <span class="comment">//Escribimos las frases ordenadas</span></div>
+<div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;Frases leidas &quot;</span>&lt;&lt; endl;</div>
+<div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;--&gt;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"></div>
+<div class="line">  cout&lt;&lt;CF&lt;&lt;endl;</div>
+<div class="line"></div>
+<div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;Dime una frase en el idioma origen:&quot;</span>&lt;&lt;endl;</div>
+<div class="line">  <span class="keywordtype">string</span> ff;</div>
+<div class="line">  getline(cin,ff);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//no distingue entre mayusculas y minusculas</span></div>
+<div class="line">  <span class="keywordflow">if</span> (CF.Esta(ff)){</div>
+<div class="line">     <a class="code" href="classFrase.html">Frase</a> f =CF.GetTraducciones(ff);</div>
+<div class="line">         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0;i&lt;f.<a class="code" href="classFrase.html#aaf7dabca6e61788bee4e0a11bd76764e">GetDestino</a>().size();++i)</div>
+<div class="line">            cout&lt;&lt;f.<a class="code" href="classFrase.html#aaf7dabca6e61788bee4e0a11bd76764e">GetDestino</a>()[i]&lt;&lt;endl;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span>{</div>
+<div class="line">        cout&lt;&lt;<span class="stringliteral">&quot;Esa frase no esta &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//Construimos un conjunto de frases que contenga una subcadena</span></div>
+<div class="line">  cout&lt;&lt;endl;</div>
+<div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;Dime una subcadena  que quieras buscar en la frase origen con sus traducciones:&quot;</span>;</div>
+<div class="line">  <span class="keywordtype">string</span> c;</div>
+<div class="line">  getline(cin,c);</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="classConjuntoFrases.html">ConjuntoFrases</a> CF_consub=CF.<a class="code" href="classConjuntoFrases.html#a8ad93d1e8962252c77944645ce7d5683">Contenga</a>(c);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//Visualizamos todas las frases con sus traducciones que contienen</span></div>
+<div class="line">  <span class="comment">//la subcadena de entrada</span></div>
+<div class="line">  cout&lt;&lt;CF_consub;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+<p>Definición en el archivo <a class="el" href="conjuntofrases_8h_source.html">conjuntofrases.h</a>.</p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<hr>
+<small>ETS Ingeniería Informática y Telecomunicaciones. Universidad de Granada.
+</small>
