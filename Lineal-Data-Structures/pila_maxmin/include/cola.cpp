@@ -1,6 +1,6 @@
 /**
   * @file cola.cpp
-  * @brief Implementación del TDA Cola
+  * @brief Implementaciï¿½n del TDA Cola
   *
   */
 #include <cassert>
@@ -13,7 +13,7 @@ template <class T>
 Cola<T>::Cola(const Cola<T> & original){
   if (original.primera!=0){           //Si tiene elementos
     Celda *p = original.primera;      //Copiamos el puntero a la primera celda
-    primera = 
+    primera =
     ultima = new Celda(p->elemento,0); //Inicializamos la lista de nodos
     p = p->siguiente;                     //Avanzamos el puntero
     while (p!=0){                         //Mientras queden elementos
@@ -44,8 +44,8 @@ Cola<T>::~Cola(){
 template <class T>
 Cola<T>& Cola<T>::operator=(const Cola<T> & otra){
   Celda * p;
-  
-  if (this != &otra){    //Comprobación de rigor. Si son diferentes objetos
+
+  if (this != &otra){    //Comprobaciï¿½n de rigor. Si son diferentes objetos
     while (primera!=0){  //Borramos la lista de nodos de la cola *this
       p = primera;
       primera = primera->siguiente;
@@ -61,7 +61,7 @@ Cola<T>& Cola<T>::operator=(const Cola<T> & otra){
         p=p->siguiente;                             //Avanzamos el puntero
       }
     }
-    else primera=ultima=0;      //Si la otra cola está vacía
+    else primera=ultima=0;      //Si la otra cola estï¿½ vacï¿½a
     num_elem=otra.num_elem;
   }
   return *this; //Devolvemos el objeto para permitir el encadenamiento (a=b=c)
@@ -72,7 +72,7 @@ Cola<T>& Cola<T>::operator=(const Cola<T> & otra){
 template <class T>
 void Cola<T>::poner(const T & elem){
   Celda *aux = new Celda(elem,0);    //Creamos un nuevo nodo
-  if (primera==0)                    //Si la lista está vacía,
+  if (primera==0)                    //Si la lista estÃ¡ vacÃ­a,
     primera = ultima = aux;          //primera y ultima apuntan a ese nodo
   else{                      //Si la lista ya tenia nodos,
     ultima->siguiente = aux; //Actualizamos el puntero siguiente del ultimo nodo
@@ -85,11 +85,11 @@ void Cola<T>::poner(const T & elem){
 
 template <class T>
 void Cola<T>::quitar(){
-  assert(primera!=0);             //Si la cola está vacía, abortar
+  assert(primera!=0);             //Si la cola estÃ¡ vacÃ­a, abortar
   Celda *aux = primera;           //Copiamos el puntero al primer nodo
   primera = primera->siguiente;   //Actualizamos primera
   delete aux;                     //Borramos el primer nodo
   if (primera == 0)               //Si no quedan nodos,
     ultima=0;                     //actualizamos ultima
-  num_elem--;                     //Actualizamos el número de elementos
+  num_elem--;                     //Actualizamos el nï¿½mero de elementos
 }
