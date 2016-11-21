@@ -1,13 +1,9 @@
 /**
   * @file cola.cpp
-  * @brief Implementaci�n del TDA Cola
+  * @brief Implementación del TDA Cola
   *
   */
 #include <cassert>
-// #include <cola.h>  El codigo ya se incluye en cola.h
-
-/* _________________________________________________________________________ */
-
 
 template <class T>
 Cola<T>::Cola(const Cola<T> & original){
@@ -27,8 +23,6 @@ Cola<T>::Cola(const Cola<T> & original){
   num_elem = original.num_elem;
 }
 
-/* _________________________________________________________________________ */
-
 template <class T>
 Cola<T>::~Cola(){
   Celda * aux;
@@ -38,8 +32,6 @@ Cola<T>::~Cola(){
     delete aux;                   //Borramos el nodo
   }
 }
-
-/* _________________________________________________________________________ */
 
 template <class T>
 Cola<T>& Cola<T>::operator=(const Cola<T> & otra){
@@ -67,8 +59,6 @@ Cola<T>& Cola<T>::operator=(const Cola<T> & otra){
   return *this; //Devolvemos el objeto para permitir el encadenamiento (a=b=c)
 }
 
-/*_________________________________________________________________________ */
-
 template <class T>
 void Cola<T>::poner(const T & elem){
   Celda *aux = new Celda(elem,0);    //Creamos un nuevo nodo
@@ -80,8 +70,6 @@ void Cola<T>::poner(const T & elem){
   }
   num_elem++;                //Incrementamos el numero de elementos
 }
-
-/* _________________________________________________________________________ */
 
 template <class T>
 void Cola<T>::quitar(){

@@ -32,7 +32,7 @@ struct elemento
      /**
       * @brief Sobrecarga del operador <<
       * @details pinta el elemento y su máximo de la siguiente forma:
-      * elemento (maximo)
+      * elemento (maximo) (minimo)
       *
       * @param os stream de salida
       * @param e elemento
@@ -40,7 +40,7 @@ struct elemento
       */
      friend ostream & operator<<(ostream &os, const  elemento& e)
      {
-   	   os << e.ele << " (" << e.maximo << ")" << endl;
+   	   os << e.ele << " (" << e.maximo << ")" << " (" << e.minimo << ")" endl;
      	 return os;
      };
  };
